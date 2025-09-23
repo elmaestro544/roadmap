@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Main page (English) -->
+    <url>
+        <loc>https://yourwebsite.com/</loc>
+        <lastmod>2024-11-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourwebsite.com/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourwebsite.com/?lang=ar" />
+    </url>
+    
+    <!-- Arabic version -->
+    <url>
+        <loc>https://yourwebsite.com/?lang=ar</loc>
+        <lastmod>2024-11-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourwebsite.com/?lang=ar" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourwebsite.com/" />
+    </url>
+    
+    <!-- Section pages (if you create separate pages later) -->
+    <!-- 
+    <url>
+        <loc>https://yourwebsite.com/templates</loc>
+        <lastmod>2024-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourwebsite.com/pricing</loc>
+        <lastmod>2024-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourwebsite.com/contact</loc>
+        <lastmod>2024-11-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    -->
+    
+</urlset>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Project Management Templates - Professional Solutions" data-ar="قوالب إدارة المشاريع - حلول احترافية">Project Management Templates - Professional Solutions</title>
+    <meta name="description" data-en="Premium project management templates to streamline your workflow. Download professional templates for project planning, tracking, and execution." data-ar="قوالب إدارة مشاريع متميزة لتحسين سير العمل. قم بتحميل قوالب احترافية لتخطيط وتتبع وتنفيذ المشاريع." content="Premium project management templates to streamline your workflow. Download professional templates for project planning, tracking, and execution.">
+    
+    <!-- CSS Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Project Management Templates - Professional Solutions">
+    <meta property="og:description" content="Premium project management templates to streamline your workflow">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'tajawal': ['Tajawal', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#1e40af',
+                        'accent': '#f59e0b',
+                        'dark': '#1f2937',
+                        'light': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="languageToggle" class="bg-white shadow-lg rounded-full px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-globe"></i>
+            <span id="currentLang">EN</span>
+        </button>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
+                    <h1 class="text-2xl font-bold text-gray-800" data-en="PM Templates" data-ar="قوالب إ.م">PM Templates</h1>
+                </div>
+                
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="#home" class="text-gray-700 hover:text-primary transition-colors" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#templates" class="text-gray-700 hover:text-primary transition-colors" data-en="Templates" data-ar="القوالب">Templates</a></li>
+                    <li><a href="#features" class="text-gray-700 hover:text-primary transition-colors" data-en="Features" data-ar="المميزات">Features</a></li>
+                    <li><a href="#pricing" class="text-gray-700 hover:text-primary transition-colors" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-primary transition-colors" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <ul class="px-4 py-4 space-y-4">
+                <li><a href="#home" class="block text-gray-700 hover:text-primary transition-colors" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#templates" class="block text-gray-700 hover:text-primary transition-colors" data-en="Templates" data-ar="القوالب">Templates</a></li>
+                <li><a href="#features" class="block text-gray-700 hover:text-primary transition-colors" data-en="Features" data-ar="المميزات">Features</a></li>
+                <li><a href="#pricing" class="block text-gray-700 hover:text-primary transition-colors" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+                <li><a href="#contact" class="block text-gray-700 hover:text-primary transition-colors" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-primary to-secondary text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-en="Professional Project Management Templates" data-ar="قوالب إدارة المشاريع الاحترافية">Professional Project Management Templates</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90" data-en="Streamline your projects with our comprehensive collection of professional templates" data-ar="قم بتبسيط مشاريعك مع مجموعتنا الشاملة من القوالب الاحترافية">Streamline your projects with our comprehensive collection of professional templates</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-accent hover:bg-yellow-500 text-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" data-en="Get Templates Now" data-ar="احصل على القوالب الآن">Get Templates Now</button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300" data-en="View Demo" data-ar="عرض تجريبي">View Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-en="Why Choose Our Templates?" data-ar="لماذا تختار قوالبنا؟">Why Choose Our Templates?</h2>
+                <p class="text-xl text-gray-600" data-en="Professionally designed templates that save time and increase productivity" data-ar="قوالب مصممة بشكل احترافي توفر الوقت وتزيد الإنتاجية">Professionally designed templates that save time and increase productivity</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Time Saving" data-ar="توفير الوقت">Time Saving</h3>
+                    <p class="text-gray-600" data-en="Ready-to-use templates that eliminate the need to start from scratch" data-ar="قوالب جاهزة للاستخدام تلغي الحاجة للبدء من الصفر">Ready-to-use templates that eliminate the need to start from scratch</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Professional Quality" data-ar="جودة احترافية">Professional Quality</h3>
+                    <p class="text-gray-600" data-en="Designed by experts with years of project management experience" data-ar="مصممة من قبل خبراء بسنوات من الخبرة في إدارة المشاريع">Designed by experts with years of project management experience</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-sync-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Regular Updates" data-ar="تحديثات منتظمة">Regular Updates</h3>
+                    <p class="text-gray-600" data-en="Keep your templates current with regular updates and new additions" data-ar="حافظ على قوالبك محدثة مع التحديثات المنتظمة والإضافات الجديدة">Keep your templates current with regular updates and new additions</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-download text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Instant Download" data-ar="تحميل فوري">Instant Download</h3>
+                    <p class="text-gray-600" data-en="Get immediate access to your purchased templates" data-ar="احصل على وصول فوري للقوالب المشتراة">Get immediate access to your purchased templates</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="Easy Customization" data-ar="تخصيص سهل">Easy Customization</h3>
+                    <p class="text-gray-600" data-en="Fully editable templates that adapt to your specific needs" data-ar="قوالب قابلة للتحرير بالكامل تتكيف مع احتياجاتك الخاصة">Fully editable templates that adapt to your specific needs</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="24/7 Support" data-ar="دعم 24/7">24/7 Support</h3>
+                    <p class="text-gray-600" data-en="Get help whenever you need it with our dedicated support team" data-ar="احصل على المساعدة متى احتجتها مع فريق الدعم المخصص">Get help whenever you need it with our dedicated support team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-en="Our Template Collection" data-ar="مجموعة قوالبنا">Our Template Collection</h2>
+                <p class="text-xl text-gray-600" data-en="Comprehensive templates for every project management need" data-ar="قوالب شاملة لكل احتياجات إدارة المشاريع">Comprehensive templates for every project management need</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Template 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template1.jpg" alt="Project Planning Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Project Planning Template" data-ar="قالب تخطيط المشروع">Project Planning Template</h3>
+                        <p class="text-gray-600 mb-4" data-en="Comprehensive planning template with timeline and resource allocation" data-ar="قالب تخطيط شامل مع الجدول الزمني وتخصيص الموارد">Comprehensive planning template with timeline and resource allocation</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$29</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors" data-en="Preview" data-ar="معاينة">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template2.jpg" alt="Gantt Chart Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Gantt Chart Template" data-ar="قالب مخطط جانت">Gantt Chart Template</h3>
+                        <p class="text-gray-600 mb-4" data-en="Advanced Gantt chart for project scheduling and tracking" data-ar="مخطط جانت متقدم لجدولة المشاريع والتتبع">Advanced Gantt chart for project scheduling and tracking</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$35</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors" data-en="Preview" data-ar="معاينة">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template3.jpg" alt="Risk Management Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Risk Management Template" data-ar="قالب إدارة المخاطر">Risk Management Template</h3>
+                        <p class="text-gray-600 mb-4" data-en="Identify, assess, and mitigate project risks effectively" data-ar="حدد وقيم وخفف مخاطر المشروع بشكل فعال">Identify, assess, and mitigate project risks effectively</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$25</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors" data-en="Preview" data-ar="معاينة">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template4.jpg" alt="Budget Tracking Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Budget Tracking Template" data-ar="قالب تتبع الميزانية">Budget Tracking Template</h3>
+                        <p class="text-gray-600 mb-4" data-en="Monitor project costs and budget allocation in real-time" data-ar="راقب تكاليف المشروع وتخصيص الميزانية في الوقت الفعلي">Monitor project costs and budget allocation in real-time</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$22</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors" data-en="Preview" data-ar="معاينة">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template5.jpg" alt="Team Management Template" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Team Management Template" data-ar="قالب إدارة الفريق">Team Management Template</h3>
+                        <p class="text-gray-600 mb-4" data-en="Organize team roles, responsibilities, and performance tracking" data-ar="نظم أدوار الفريق والمسؤوليات وتتبع الأداء">Organize team roles, responsibilities, and performance tracking</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$28</span>
+                            <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors" data-en="Preview" data-ar="معاينة">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="images/template6.jpg" alt="Complete Bundle" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" data-en="Complete Bundle" data-ar="الحزمة الكاملة">Complete Bundle</h3>
+                        <p class="text-gray-600 mb-4" data-en="All templates in one comprehensive package with bonus materials" data-ar="جميع القوالب في حزمة شاملة واحدة مع مواد إضافية">All templates in one comprehensive package with bonus materials</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 line-through text-lg">$169</span>
+                            <span class="text-2xl font-bold text-primary">$99</span>
+                            <button class="bg-accent text-dark px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors font-semibold" data-en="Best Deal" data-ar="أفضل عرض">Best Deal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-en="Choose Your Plan" data-ar="اختر خطتك">Choose Your Plan</h2>
+                <p class="text-xl text-gray-600" data-en="Flexible pricing options to meet your project management needs" data-ar="خيارات تسعير مرنة لتلبية احتياجات إدارة مشاريعك">Flexible pricing options to meet your project management needs</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4" data-en="Basic Pack" data-ar="الحزمة الأساسية">Basic Pack</h3>
+                    <div class="text-4xl font-bold text-primary mb-6">$49</div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="5 Premium Templates" data-ar="5 قوالب متميزة">5 Premium Templates</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Basic Documentation" data-ar="وثائق أساسية">Basic Documentation</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Email Support" data-ar="دعم عبر البريد الإلكتروني">Email Support</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Lifetime Updates" data-ar="تحديثات مدى الحياة">Lifetime Updates</span></li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold" data-en="Get Basic Pack" data-ar="احصل على الحزمة الأساسية" onclick="purchaseTemplate('basic', 49)">Get Basic Pack</button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-white rounded-xl shadow-xl p-8 text-center border-4 border-primary relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold" data-en="Most Popular" data-ar="الأكثر شعبية">Most Popular</div>
+                    <h3 class="text-2xl font-bold mb-4 mt-4" data-en="Professional Pack" data-ar="الحزمة الاحترافية">Professional Pack</h3>
+                    <div class="text-4xl font-bold text-primary mb-6">$99</div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="All 15 Premium Templates" data-ar="جميع القوالب الـ15 المتميزة">All 15 Premium Templates</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Comprehensive Guide" data-ar="دليل شامل">Comprehensive Guide</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Priority Support" data-ar="دعم ذو أولوية">Priority Support</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Bonus Resources" data-ar="موارد إضافية">Bonus Resources</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Video Tutorials" data-ar="فيديوهات تعليمية">Video Tutorials</span></li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold" data-en="Get Professional Pack" data-ar="احصل على الحزمة الاحترافية" onclick="purchaseTemplate('professional', 99)">Get Professional Pack</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4" data-en="Enterprise Pack" data-ar="حزمة المؤسسات">Enterprise Pack</h3>
+                    <div class="text-4xl font-bold text-primary mb-6">$199</div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="All Templates + Extras" data-ar="جميع القوالب + إضافات">All Templates + Extras</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Custom Templates" data-ar="قوالب مخصصة">Custom Templates</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="1-on-1 Consultation" data-ar="استشارة فردية">1-on-1 Consultation</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="White Label Rights" data-ar="حقوق العلامة البيضاء">White Label Rights</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i><span data-en="Extended License" data-ar="ترخيص موسع">Extended License</span></li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold" data-en="Get Enterprise Pack" data-ar="احصل على حزمة المؤسسات" onclick="purchaseTemplate('enterprise', 199)">Get Enterprise Pack</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-en="What Our Customers Say" data-ar="ماذا يقول عملاؤنا">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600" data-en="Join thousands of satisfied project managers" data-ar="انضم إلى الآلاف من مديري المشاريع الراضين">Join thousands of satisfied project managers</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="images/testimonial1.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold" data-en="Sarah Johnson" data-ar="سارة جونسون">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm" data-en="Project Manager" data-ar="مدير مشروع">Project Manager</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600" data-en="These templates saved me hours of work. Professional quality and easy to customize!" data-ar="هذه القوالب وفرت لي ساعات من العمل. جودة احترافية وسهلة التخصيص!">These templates saved me hours of work. Professional quality and easy to customize!</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="images/testimonial2.jpg" alt="Ahmed Hassan" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold" data-en="Ahmed Hassan" data-ar="أحمد حسن">Ahmed Hassan</h4>
+                            <p class="text-gray-600 text-sm" data-en="IT Director" data-ar="مدير تقنية المعلومات">IT Director</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600" data-en="Excellent templates with comprehensive documentation. Highly recommended!" data-ar="قوالب ممتازة مع وثائق شاملة. أوصي بها بشدة!">Excellent templates with comprehensive documentation. Highly recommended!</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="images/testimonial3.jpg" alt="Maria Garcia" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold" data-en="Maria Garcia" data-ar="ماريا غارسيا">Maria Garcia</h4>
+                            <p class="text-gray-600 text-sm" data-en="Consultant" data-ar="مستشارة">Consultant</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600" data-en="Perfect for my consulting business. My clients love the professional presentation!" data-ar="مثالية لعمل الاستشارات. عملائي يحبون العرض الاحترافي!">Perfect for my consulting business. My clients love the professional presentation!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
+                <p class="text-xl text-gray-600" data-en="Have questions? We're here to help!" data-ar="لديك أسئلة؟ نحن هنا للمساعدة!">Have questions? We're here to help!</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6" data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-primary mr-4"></i>
+                                <span>support@pmtemplates.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-primary mr-4"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-primary mr-4"></i>
+                                <span data-en="New York, NY 10001" data-ar="نيويورك، نيويورك 10001">New York, NY 10001</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2" data-en="Name" data-ar="الاسم">Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-placeholder-en="Your Name" data-placeholder-ar="اسمك" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-placeholder-en="your@email.com" data-placeholder-ar="بريدك@الإلكتروني.com" placeholder="your@email.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2" data-en="Message" data-ar="الرسالة">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" data-placeholder-en="Your message here..." data-placeholder-ar="رسالتك هنا..." placeholder="Your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4" data-en="PM Templates" data-ar="قوالب إ.م">PM Templates</h3>
+                    <p class="text-gray-400" data-en="Professional project management templates to boost your productivity" data-ar="قوالب إدارة مشاريع احترافية لتعزيز إنتاجيتك">Professional project management templates to boost your productivity</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="#templates" class="hover:text-white transition-colors" data-en="Templates" data-ar="القوالب">Templates</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" data-en="Support" data-ar="الدعم">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors" data-en="FAQ" data-ar="الأسئلة الشائعة">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-en="Documentation" data-ar="الوثائق">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4" data-en="Follow Us" data-ar="تابعنا">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-en="© 2024 PM Templates. All rights reserved." data-ar="© 2024 قوالب إ.م. جميع الحقوق محفوظة.">© 2024 PM Templates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold" data-en="Secure Checkout" data-ar="الدفع الآمن">Secure Checkout</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="paymentContent">
+                <div class="mb-4">
+                    <h4 id="packageName" class="font-semibold text-lg"></h4>
+                    <p id="packagePrice" class="text-2xl font-bold text-primary"></p>
+                </div>
+                
+                <form id="paymentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" data-en="Email Address" data-ar="عنوان البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="emailInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2" data-en="Card Details" data-ar="تفاصيل البطاقة">Card Details</label>
+                        <div id="card-element" class="border border-gray-300 rounded-lg p-3">
+                            <!-- Stripe Elements will create form elements here -->
+                        </div>
+                    </div>
+                    
+                    <button type="submit" id="submitPayment" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-secondary transition-colors font-semibold" data-en="Complete Purchase" data-ar="إتمام الشراء">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span data-en="Payment successful! Check your email for download links." data-ar="تم الدفع بنجاح! تحقق من بريدك الإلكتروني للروابط.">Payment successful! Check your email for download links.</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/language.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

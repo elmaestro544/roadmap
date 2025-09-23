@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Block unnecessary directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block common bot paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
